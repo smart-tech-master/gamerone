@@ -1,0 +1,45 @@
+// .game-list-item {
+//   background: $base-dark;
+//   border-bottom: 1px solid grey;
+
+//   &.chosen {
+//     background: transparent;
+//     border-bottom: 0px;
+//     flex-direction: column;
+//   }
+
+//   &.hover {
+//     background: lighten($base, 10%);
+//   }
+
+//   &.selected {
+//     background: #aaa;
+//     cursor: not-allowed;
+
+//     .game-name h6 {
+//       color: white;
+//     }
+//   }
+
+//   .game-cover {
+//     img {
+//       width: auto;
+//       max-height: 70px;
+//     }
+//   }
+
+//   .game-name {
+//     display: flex;
+//     align-items: center;
+//     width: 140px;
+//     font-size: 0.8em;
+//   }
+
+//   .item-remove {
+//     position: absolute;
+//     right: 4px;
+//     top: 10px;
+//     color: white;
+//     cursor: pointer;
+//   }
+// }

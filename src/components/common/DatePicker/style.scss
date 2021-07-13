@@ -1,0 +1,236 @@
+@import '../../../styles/varsandmixins';
+
+.date-picker {
+  position: relative;
+  //   color: $font-color;
+  //   //   width: 240px;
+  //   width: 100%;
+  //   box-sizing: border-box;
+  //   font-family: 'Nunito Sans', sans-serif;
+}
+
+.date-picker__input {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  width: 100%;
+  // min-width: 15rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border: 2px solid $white-soft;
+  @include shadowSmall;
+  background: $greylighter;
+  border-radius: 1.125rem;
+  color: var(--text-color);
+
+  @include darkMode {
+    background: $base-dark;
+    border-color: $base;
+
+    &:hover {
+      background: darken($base-dark, 2%);
+      // border-color: darken($base-dark, 5%);
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &:-moz-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &::-moz-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &:-ms-input-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &::placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    color: $theme;
+    border-color: rgba($theme, 0.5);
+
+    @include darkMode {
+      color: $theme-light;
+      border-color: rgba($theme-light, 0.5);
+    }
+  }
+
+  &.is-error {
+    border-color: $error;
+  }
+
+  &.is-disabled {
+    color: rgba($base, 0.4);
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+
+    @include darkMode {
+      color: rgba($white, 0.4);
+    }
+  }
+}
+
+// // Forms
+// $form-bg: #132a43;
+// $form-control-border-color: #0db8de;
+
+// $line-color: #fff;
+// $font-color: var(--text-color);
+$font-color-emphasis: #f8ca00;
+// $highlight-color-background: lighten(#8a9b0f, 5%);
+
+// Calendar
+$calendar-zindex: 1002;
+// $calendar-color-background: $form-bg;
+// $calendar-color-alt-background: $form-control-border-color;
+$calendar-padding: 10px;
+
+// .date-picker__date-selection {
+//   //   padding: 10px;
+//   font-size: 24px;
+//   display: flex;
+//   cursor: pointer;
+// }
+
+.date-picker__calendar {
+  position: absolute;
+}
+
+.calendar {
+  box-sizing: border-box;
+  width: inherit;
+  min-height: 17em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $white-soft;
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: $calendar-zindex;
+  background: $greylighter;
+
+  @include darkMode {
+    background: $base-dark;
+    border-color: $base;
+
+    &:hover {
+      background: darken($base-dark, 2%);
+      // border-color: darken($base-dark, 5%);
+    }
+  }
+}
+
+.calendar__controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+
+  .fas {
+    cursor: pointer;
+  }
+}
+
+.calendar__controls {
+  align-self: stretch;
+  display: flex;
+
+  .fas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.calendar__week,
+.calendar__days-of-week {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar__days-of-week {
+  font-weight: bold;
+  border-bottom: 1px solid $white-soft;
+  border-top: 1px solid $white-soft;
+  margin-bottom: 0.5em;
+  margin-left: -$calendar-padding;
+  margin-right: -$calendar-padding;
+  padding: 0 $calendar-padding;
+  //   background: $calendar-color-alt-background;
+
+  @include darkMode {
+    // background: $base-dark;
+    border-color: $base;
+
+    &:hover {
+      background: darken($base-dark, 2%);
+      // border-color: darken($base-dark, 5%);
+    }
+  }
+}
+
+.calendar__day,
+.calendar__day-of-week,
+.calendar__month-with-year,
+.calendar__controls .fas {
+  text-align: center;
+  min-width: 1.2em;
+  //   padding: 0.2em;
+}
+
+.calendar__day,
+.calendar__month-with-year,
+.calendar__controls .fas {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover {
+    // background: $highlight-color-background;
+  }
+}
+
+.calendar__day--pale {
+  color: rgba($base, 0.4);
+
+  @include darkMode {
+    color: rgba($white, 0.4);
+  }
+}
+
+.calendar__day--emphasize {
+  font-weight: bold;
+  color: $font-color-emphasis;
+}

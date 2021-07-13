@@ -1,0 +1,48 @@
+@import '../../../styles/varsandmixins';
+
+.list-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  border-radius: 1.5rem;
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(saturate($greylight, 5%), 0.5);
+
+      @include darkMode {
+        background-color: rgba($black, 0.1);
+      }
+    }
+    &:active {
+      background-color: rgba(saturate($greylight, 5%), 0.75);
+      box-shadow: none;
+
+      @include darkMode {
+        background-color: rgba($black, 0.15);
+      }
+    }
+  }
+
+  &.has-append-right {
+    padding-right: 4rem;
+  }
+  &__append-right {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  &__content {
+    margin-left: 1rem;
+    color: var(--text-color);
+  }
+
+  p {
+    opacity: 0.3;
+  }
+}

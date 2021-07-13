@@ -1,0 +1,37 @@
+name: production
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Building & Testing the Application
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Make Install
+        run: make install
+
+      - name: Make Build
+        run: make build-production
+
+      # - name: Run Tests
+      #   run: make test
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ca-central-1
+      - name: Copy files to S3 with the AWS CLI
+        run: |
+          aws s3 sync ./build/ s3://prod.gamerone.gg

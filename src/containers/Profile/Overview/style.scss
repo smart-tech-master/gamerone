@@ -1,0 +1,16 @@
+.react-grid-layout {
+  position: relative;
+  // margin: 2.5rem auto;
+  margin: -27.5rem auto 2.5rem auto;
+  max-width: 90rem;
+
+  .grid-card {
+    display: flex;
+    .card {
+      align-items: stretch;
+      width: 100%;
+      max-width: none; // overwrite .card defaults
+      margin: 0; // overwrite .card defaults
+    }
+  }
+}

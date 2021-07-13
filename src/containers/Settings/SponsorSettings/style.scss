@@ -1,0 +1,57 @@
+@import '../../../styles/varsandmixins';
+
+.split-screen {
+  display: flex;
+  flex-direction: row;
+
+  .list {
+    margin-right: 1.5rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba($white, 0.5);
+    box-shadow: 0 0 -1px rgba($black, 0.05);
+
+    @include darkMode {
+      border-right: 1px solid rgba($white, 0.05);
+      box-shadow: 0 0 -1px rgba($black, 0.25);
+    }
+  }
+
+  &__content {
+    padding: 1rem 2rem;
+
+    h4 {
+      opacity: 0.5;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+    .tag {
+      color: $theme;
+      @include darkMode {
+        color: $theme-light;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    padding: 1.5rem 2rem 2rem;
+    border-top: 1px solid rgba($white, 0.5);
+    box-shadow: 0 -1px 0 rgba($black, 0.05);
+
+    @include darkMode {
+      border-top: 1px solid rgba($white, 0.05);
+      box-shadow: 0 -1px 0 rgba($black, 0.25);
+    }
+
+    .button + .button,
+    .button + .dropdown-wrapper {
+      margin-left: 1.5rem;
+    }
+
+    .button.last {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.card {
+  &.card--store {
+    overflow: hidden;
+  }
+}
+
+.store-card {
+  overflow: hidden;
+
+  &.carousel-wrapper {
+    display: flex;
+    flex: 1;
+
+    .controls {
+      background: transparent;
+      border: none;
+    }
+  }
+}

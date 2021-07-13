@@ -1,0 +1,131 @@
+@import '../../../styles/varsandmixins';
+
+.debounced-input {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  width: 100%;
+  min-width: 15rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border: 2px solid $white-soft;
+  @include shadowSmall;
+  background: $greylighter;
+  border-radius: 1.125rem;
+  color: var(--text-color);
+
+  @include darkMode {
+    background: $base-dark;
+    border-color: $base;
+
+    &:hover {
+      background: darken($base-dark, 2%);
+      // border-color: darken($base-dark, 5%);
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &:-moz-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &::-moz-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &:-ms-input-placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+  &::placeholder {
+    color: rgba($base, 0.4);
+
+    @include darkMode {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    color: $theme;
+    border-color: rgba($theme, 0.5);
+
+    @include darkMode {
+      color: $theme-light;
+      border-color: rgba($theme-light, 0.5);
+    }
+  }
+
+  &.is-error {
+    border-color: $error;
+  }
+
+  &.is-disabled {
+    color: rgba($base, 0.4);
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+
+    @include darkMode {
+      color: rgba($white, 0.4);
+    }
+  }
+  &--flat {
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+// Label
+.debounced-input-label {
+  min-width: 6rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+
+.debounced-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  // Append Left/right
+  .debounced-input-append-left {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+  }
+  .debounced-input-append-right {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+  .debounced-input-append-left ~ .input {
+    padding-left: 2.5rem;
+  }
+  .debounced-input-append-right ~ .input {
+    padding-right: 3rem;
+  }
+}

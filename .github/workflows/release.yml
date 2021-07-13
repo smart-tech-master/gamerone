@@ -1,0 +1,39 @@
+name: release
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Create a new release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Get a new major version
+        if: contains(github.event.pull_request.labels.*.name, 'major')
+        run: echo ::set-env name=version::$(make major)
+
+      - name: get a new minor version
+        if: contains(github.event.pull_request.labels.*.name, 'minor') && contains(github.event.pull_request.labels.*.name, 'major') != true
+        run: echo ::set-env name=version::$(make minor)
+
+      - name: get a new patched version number
+        if: contains(github.event.pull_request.labels.*.name, 'minor') != true && contains(github.event.pull_request.labels.*.name, 'major') != true
+        run: echo ::set-env name=version::$(make patch)
+
+
+      - name: Create release
+        if: github.event.pull_request.merged == true
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.version }}
+          release_name: ${{ github.event.pull_request.title }}
+          body: ${{ github.event.pull_request.body }}
+          draft: false
+          prerelease: false

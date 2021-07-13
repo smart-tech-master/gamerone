@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner settings renders the form without crash 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <form>
+      <div
+        class="card__content"
+      >
+        <h4>
+          Cover
+        </h4>
+        <div
+          class="dropzone"
+          tabindex="0"
+        >
+          <input
+            accept="image/*"
+            aria-label="file-upload"
+            autocomplete="off"
+            style="display: none;"
+            tabindex="-1"
+            type="file"
+          />
+          <div
+            aria-label="banner"
+            style="height: 110px; background-image: url(https://cdn.gamerone.gg/1100x220/profile/vadim.svg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+          />
+        </div>
+      </div>
+      <div
+        class="card__actions"
+      >
+        <button
+          class="button button--primary"
+          disabled=""
+          type="submit"
+        >
+          Upload
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

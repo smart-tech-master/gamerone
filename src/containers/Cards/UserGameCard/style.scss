@@ -1,0 +1,12 @@
+@import '../../../styles/varsandmixins';
+
+.card--game {
+  min-height: $grid-template-row-height; // find another way of getting card to fill height
+  overflow: hidden;
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}

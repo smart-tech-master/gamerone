@@ -1,0 +1,40 @@
+@import '../../../styles/varsandmixins';
+
+.cover {
+  position: relative;
+  background: $greylighter;
+  height: 50vw;
+  margin-bottom: calc(-50vw + 10rem);
+  background: $greylight;
+
+  @include tabletAndUp {
+    height: 35vw;
+    margin-bottom: calc(-35vw + 10rem);
+  }
+  @include wideDesktopAndUp {
+    height: 25vw;
+    margin-bottom: calc(-25vw + 10rem);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba($greylighter, 0),
+      rgba($greylighter, 1)
+    );
+
+    @include darkMode {
+      background: linear-gradient(180deg, rgba($base, 0), rgba($base, 1));
+    }
+  }
+
+  @include darkMode {
+    background: lighten($base, 3%);
+  }
+}

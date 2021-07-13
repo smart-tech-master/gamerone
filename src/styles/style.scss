@@ -1,0 +1,48 @@
+@import-normalize;
+@import './reset.scss';
+@import 'varsandmixins';
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap);
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: $fontFamily;
+
+  font-size: 100%; // = 16px
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: #{$greylighter};
+  --text-color: #{$base};
+
+  @include darkMode {
+    --bg-color: #{$base};
+    --text-color: #{$white-soft};
+  }
+}
+
+section {
+  padding: 0 1.25rem;
+}
+
+.section {
+  padding: 6rem 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pointer {
+  cursor: pointer;
+}

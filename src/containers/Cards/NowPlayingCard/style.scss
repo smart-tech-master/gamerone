@@ -1,0 +1,28 @@
+.now-playing-game {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+
+  .footer {
+    display: flex;
+    flex: 1;
+    align-self: flex-end;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 1.25rem;
+    background: var(--bg-color);
+    min-height: 7rem;
+
+    .watch {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+  .details {
+    p {
+      font-size: 90%;
+      opacity: 0.5;
+    }
+  }
+}

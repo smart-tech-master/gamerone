@@ -1,0 +1,43 @@
+// .profile-list-item {
+//   background: $base-dark;
+//   border-bottom: 1px solid grey;
+
+//   &.chosen {
+//     background: transparent;
+//     border-bottom: 0px;
+//     flex-direction: column;
+//   }
+
+//   &.selected {
+//     background: #aaa;
+//     cursor: not-allowed;
+
+//     .profile-name h6 {
+//       color: white;
+//     }
+//   }
+
+//   &.hover {
+//     background: lighten($base, 10%);
+//   }
+
+//   .profile-avatar {
+//   }
+
+//   .profile-name {
+//     width: 140px;
+//     font-size: 0.8em;
+
+//     h6 {
+//       font-size: 1.1em;
+//     }
+//   }
+
+//   .item-remove {
+//     position: absolute;
+//     right: 4px;
+//     top: 10px;
+//     color: white;
+//     cursor: pointer;
+//   }
+// }

@@ -1,0 +1,82 @@
+@import '../../../../styles/varsandmixins';
+
+.input-wrapper {
+  .input-hint {
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  &.is-error .input-hint {
+    color: $error;
+    opacity: 1;
+  }
+  &.is-disabled .input-hint {
+    opacity: 0.3;
+  }
+}
+
+.input-search-wrapper {
+  .input-search-hint {
+    position: absolute;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  &.is-error .input-search-hint {
+    color: $error;
+    opacity: 1;
+  }
+  &.is-disabled .input-search-hint {
+    opacity: 0.3;
+  }
+}
+
+.select-wrapper {
+  .select-hint {
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  &.is-error .select-hint {
+    color: $error;
+    opacity: 1;
+  }
+  &.is-disabled .select-hint {
+    opacity: 0.3;
+  }
+}
+
+.checkbox-wrapper {
+  .checkbox-hint {
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  &.is-error .checkbox-hint {
+    color: $error;
+    opacity: 1;
+  }
+  &.is-disabled .checkbox-hint {
+    opacity: 0.3;
+  }
+}
+
+.datepicker-wrapper {
+  .datepicker-hint {
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+  &.is-error .datepicker-hint {
+    color: $error;
+    opacity: 1;
+  }
+  &.is-disabled .datepicker-hint {
+    opacity: 0.3;
+  }
+}

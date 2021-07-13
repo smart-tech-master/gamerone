@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cards visibility section initial 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__content"
+  >
+    <h4>
+      Cards
+    </h4>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="profile__cards--visibility"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="sponsors"
+          >
+            Sponsors
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="sponsors"
+              className="checkbox"
+              id="sponsors"
+              name="sponsors"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="socialNetworks"
+          >
+            Social Networks
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="socialNetworks"
+              className="checkbox"
+              id="socialNetworks"
+              name="socialNetworks"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="currentlyPlaying"
+          >
+            Currently Playing
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="currentlyPlaying"
+              className="checkbox"
+              id="currentlyPlaying"
+              name="currentlyPlaying"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="gear"
+          >
+            Gears
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="gear"
+              className="checkbox"
+              id="gear"
+              name="gear"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="achievements"
+          >
+            Achievements
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="achievements"
+              className="checkbox"
+              id="achievements"
+              name="achievements"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "width": "100%",
+            }
+          }
+        >
+          <label
+            className="checkbox-label"
+            htmlFor="store"
+          >
+            Products
+          </label>
+          <div
+            className="checkbox-wrapper"
+          >
+            <input
+              aria-label="store"
+              className="checkbox"
+              id="store"
+              name="store"
+              type="checkbox"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          className="button button--primary button--medium is-disabled"
+          disabled={true}
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

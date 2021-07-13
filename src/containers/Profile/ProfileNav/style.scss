@@ -1,0 +1,68 @@
+@import '../../../styles/varsandmixins';
+
+.profile-nav {
+  position: relative;
+  list-style: none;
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  background: rgba($black, 0.1);
+  font-size: 1.125rem;
+  overflow: hidden;
+  max-width: 100%;
+  // @include insetSmall;
+  z-index: 10; // ensure the navigation appears on top of react-grid-layout
+
+  @include tabletAndUp {
+    overflow-x: auto;
+  }
+  @include darkMode {
+    background: rgba($black, 0.2);
+  }
+
+  li {
+    flex: 1;
+  }
+
+  li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.875rem;
+    text-align: center;
+    opacity: 0.7;
+
+    &:hover:not(.is-active) {
+      background: rgba($black, 0.05);
+      opacity: 1;
+    }
+
+    &.is-active {
+      background: var(--bg-color);
+      @include shadowSmall;
+      opacity: 1;
+    }
+  }
+  li + li a {
+    margin-left: 0.75rem;
+  }
+
+  [class^='icon-'],
+  [class*=' icon-'] {
+    margin-right: 0.8rem;
+  }
+}
+
+.grid {
+  .cover-spacer {
+    grid-column: auto / span 2;
+    grid-row-span: auto / span 2;
+
+    display: flex;
+    align-items: flex-end;
+
+    @include tabletAndUp {
+      display: inherit;
+      grid-column: 3 / span 3;
+    }
+  }
+}

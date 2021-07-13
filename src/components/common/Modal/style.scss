@@ -1,0 +1,78 @@
+@import '../../../styles/varsandmixins';
+
+.fullscreen {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: var(--bg-color);
+  box-shadow: 0;
+  border-radius: 1.25rem;
+
+  &__header {
+    padding: 1rem 2rem;
+  }
+
+  &__content {
+    padding: 1rem 2rem;
+
+    h4 {
+      opacity: 0.5;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+    .tag {
+      color: $theme;
+      @include darkMode {
+        color: $theme-light;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    padding: 1.5rem 2rem 2rem;
+    border-top: 1px solid rgba($white, 0.5);
+    box-shadow: 0 -1px 0 rgba($black, 0.05);
+
+    @include darkMode {
+      border-top: 1px solid rgba($white, 0.05);
+      box-shadow: 0 -1px 0 rgba($black, 0.25);
+    }
+
+    .button + .button,
+    .button + .dropdown-wrapper {
+      margin-left: 1.5rem;
+    }
+
+    .button.last {
+      margin-left: auto;
+    }
+  }
+
+  .editimage__editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .rc-slider {
+    margin: 1.5rem 0rem;
+    width: 50%;
+  }
+}

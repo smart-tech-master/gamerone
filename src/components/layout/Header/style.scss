@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -4.5rem;
+  padding: 0 1.25rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: 1.5rem 0.75rem;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    .button--flat-subtle {
+      margin-right: 1rem;
+    }
+  }
+}

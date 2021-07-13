@@ -1,0 +1,222 @@
+@import '../../../styles/varsandmixins';
+
+.card--user {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  box-shadow: 0.25rem 0.25rem 1.25rem $greylight;
+  z-index: 10; // ensure the navigation appears on top of react-grid-layout
+
+  @include darkMode {
+    box-shadow: 0.25rem 0.25rem 1.25rem rgba(#000, 0.3);
+  }
+
+  .card__header {
+    padding: 1.25rem 3.25rem 1.25rem 0;
+  }
+
+  .profile-picture {
+    width: 7.5rem;
+    height: 7.5rem;
+    float: left;
+    margin: -3.75rem 1.25rem 0 2rem;
+    background: $greylight;
+    border-radius: 3rem;
+    border: 0.25rem solid var(--bg-color);
+
+    @include darkMode {
+      background: lighten($base, 3%);
+    }
+  }
+
+  .username {
+    font-size: 1.5rem;
+
+    .at {
+      opacity: 0.3;
+    }
+
+    .user-type-badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba($theme-light, 0.5);
+      letter-spacing: 1px;
+      background: rgba($theme-light, 0.05);
+      color: rgba($theme-light, 0.75);
+
+      @include darkMode {
+        background: rgba($theme, 0.05);
+        border: 1px solid rgba($theme, 0.5);
+        color: rgba($theme-light, 0.5);
+      }
+    }
+  }
+  .name {
+    font-size: 1.25rem;
+    font-weight: normal;
+    opacity: 0.3;
+  }
+
+  .status {
+    position: relative;
+    display: inline-block;
+    margin: 0 2rem 1rem;
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    border-radius: 1rem;
+    background: rgba($greylight, 0.5);
+    line-height: 1.5rem;
+
+    @include darkMode {
+      background: $base-dark;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 2.5rem;
+      border: 0.75rem solid transparent;
+      border-bottom-color: rgba($greylight, 0.5);
+
+      @include darkMode {
+        border-bottom-color: $base-dark;
+      }
+    }
+
+    .icon {
+      float: left;
+      margin-left: -1.5rem;
+      margin-right: 0.25rem;
+      font-size: 3rem;
+      line-height: 1rem;
+      opacity: 0.3;
+      transform: translateY(0.75rem);
+    }
+  }
+
+  .card__content {
+    flex: 1;
+
+    .value {
+      display: inline-block;
+      min-width: 2.5rem;
+      font-size: 1.25rem;
+    }
+    label {
+      margin-right: 0.75rem;
+      opacity: 0.5;
+    }
+  }
+}
+
+// .grid {
+//   .card--user {
+//     grid-column: 1 / span 2;
+//     grid-row: 1 / span 2;
+//     box-shadow: 0.25rem 0.25rem 1.25rem $greylight;
+
+//     @include darkMode {
+//       box-shadow: 0.25rem 0.25rem 1.25rem rgba(#000, 0.3);
+//     }
+
+//     .card__header {
+//       padding: 1.25rem 3.25rem 1.25rem 0;
+//     }
+
+//     .profile-picture {
+//       width: 7.5rem;
+//       height: 7.5rem;
+//       float: left;
+//       margin: -3.75rem 1.25rem 0 2rem;
+//       background: $greylight;
+//       border-radius: 3rem;
+//       border: 0.25rem solid var(--bg-color);
+
+//       @include darkMode {
+//         background: lighten($base, 3%);
+//       }
+//     }
+
+//     .username {
+//       font-size: 1.5rem;
+
+//       .at {
+//         opacity: 0.3;
+//       }
+
+//       .badge {
+//         display: inline-block;
+//         padding: 0.25rem 0.5rem;
+//         font-size: 0.875rem;
+//         border-radius: 0.75rem;
+//         border: 1px solid rgba($theme-light, 0.5);
+//         letter-spacing: 1px;
+//         background: rgba($theme-light, 0.05);
+//         color: rgba($theme-light, 0.75);
+
+//         @include darkMode {
+//           background: rgba($theme, 0.05);
+//           border: 1px solid rgba($theme, 0.5);
+//           color: rgba($theme-light, 0.5);
+//         }
+//       }
+//     }
+//     .name {
+//       font-size: 1.25rem;
+//       font-weight: normal;
+//       opacity: 0.3;
+//     }
+
+//     .status {
+//       position: relative;
+//       display: inline-block;
+//       margin: 0 2rem 1rem;
+//       padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+//       border-radius: 1rem;
+//       background: rgba($greylight, 0.5);
+//       line-height: 1.5rem;
+
+//       @include darkMode {
+//         background: $base-dark;
+//       }
+
+//       &:before {
+//         content: '';
+//         position: absolute;
+//         bottom: 100%;
+//         left: 2.5rem;
+//         border: 0.75rem solid transparent;
+//         border-bottom-color: rgba($greylight, 0.5);
+
+//         @include darkMode {
+//           border-bottom-color: $base-dark;
+//         }
+//       }
+
+//       .icon {
+//         float: left;
+//         margin-left: -1.5rem;
+//         margin-right: 0.25rem;
+//         font-size: 3rem;
+//         line-height: 1rem;
+//         opacity: 0.3;
+//         transform: translateY(0.75rem);
+//       }
+//     }
+
+//     .card__content {
+//       flex: 1;
+
+//       .value {
+//         display: inline-block;
+//         min-width: 2.5rem;
+//         font-size: 1.25rem;
+//       }
+//       label {
+//         margin-right: 0.75rem;
+//         opacity: 0.5;
+//       }
+//     }
+//   }
+// }

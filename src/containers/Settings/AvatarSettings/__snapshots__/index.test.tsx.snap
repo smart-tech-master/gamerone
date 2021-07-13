@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avatar settings renders the form without crash 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <form>
+      <div
+        class="card__content"
+      >
+        <h4>
+          Avatar
+        </h4>
+        <div
+          class="dropzone form-group text-center"
+          tabindex="0"
+        >
+          <input
+            accept="image/*"
+            aria-label="file-upload"
+            autocomplete="off"
+            style="display: none;"
+            tabindex="-1"
+            type="file"
+          />
+          <img
+            alt="vadim"
+            class="image_avatar xl avatar-upload"
+            height="128"
+            id="avatar"
+            src="https://cdn.gamerone.gg/128x128/profile/vadim.svg"
+            width="128"
+          />
+        </div>
+      </div>
+      <div
+        class="card__actions"
+      >
+        <button
+          class="button button--primary"
+          disabled=""
+          type="submit"
+        >
+          Upload
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
